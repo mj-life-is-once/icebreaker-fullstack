@@ -47,7 +47,7 @@ const Form = () => {
     <div className="pt-20 w-full">
       <div className="max-w-md m-auto">
         <h1 className="text-6xl text-center">🦜⛓️</h1>
-        <h1 className="p-5 font-extrabold text-6xl bg-gradient-to-r from-rose-100 to-teal-100 inline-block text-transparent bg-clip-text mb-10 text-center leading-10 ">
+        <h1 className="p-5 font-extrabold text-6xl bg-gradient-to-r from-rose-100 to-teal-100 inline-block text-transparent bg-clip-text mb-10 text-center ">
           Langchain Icebreaker
         </h1>
         {/* <Members></Members> */}
@@ -66,7 +66,7 @@ const Form = () => {
           ))}
         </div>
 
-        <form className="flex flex-col gap-3" onSubmit={onSubmit}>
+        <form className="flex flex-col gap-3 px-20" onSubmit={onSubmit}>
           <label className="text-xl">
             Name
             <input
