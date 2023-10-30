@@ -17,7 +17,7 @@ const Modal = ({ isOpen }: Props) => {
   return createPortal(
     <div className="fixed z-2 top-0 left-0 w-full h-full bg-black/80 overflow-auto">
       <div className="flex flex-col h-full">
-        <div className="text-white my-auto animate-bounce">
+        <div className="text-white my-auto animate-pulse">
           <p className="text-center text-white text-3xl">
             Is getting the data...
           </p>

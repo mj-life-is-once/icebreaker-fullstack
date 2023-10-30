@@ -15,7 +15,7 @@ const FULL_NAMES: { [key: string]: string } = {
 const Result = ({ result }: { result: IceBreakReponse }) => {
   //   console.log(result);
   return (
-    <div className="flex flex-col gap-5 my-10">
+    <div className="mx-auto w-1/2 flex flex-col gap-5 my-20 bg-slate-900 py-10 px-20 rounded-lg shadow">
       <img
         src={`/images/${result["short_name"]}.jpeg`}
         alt="profile_image"
@@ -24,8 +24,8 @@ const Result = ({ result }: { result: IceBreakReponse }) => {
       <h1 className="text-2xl font-bold text-center">
         {FULL_NAMES[result["short_name"]]}
       </h1>
-      <p>{result["summary"]}</p>
-      <ul className="flex flex-col gap-2">
+      <p className="mt-5">{result["summary"]}</p>
+      <ul className="flex flex-col gap-5">
         <h2 className="text-xl font-bold text-center p-2 text-green-200">
           🪴 Interesting Facts
         </h2>
@@ -35,7 +35,7 @@ const Result = ({ result }: { result: IceBreakReponse }) => {
           </li>
         ))}
       </ul>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-5">
         <h2 className="text-xl font-bold text-center p-2  text-pink-200">
           🥶 Ice Breakers
         </h2>
@@ -44,12 +44,13 @@ const Result = ({ result }: { result: IceBreakReponse }) => {
           <li key={`${result["short_name"]}_${index}`}>{item}</li>
         ))}
       </ul>
-      <ul className="flex flex-col gap-2">
-        <h2 className="text-xl font-bold text-center p-2  text-yellow-200">
-          🌟 My Interests
-        </h2>
+
+      <h2 className="text-xl font-bold text-center p-2  text-yellow-200">
+        🌟 My Interests
+      </h2>
+      <ul className="flex flex-row gap-3 justify-evenly font-bold">
         {result["interests"].map((interest: string, index: number) => (
-          <li key={`${result["short_name"]}_${index}`}>{interest}</li>
+          <li key={`${result["short_name"]}_${index}`}>{`${interest}`}</li>
         ))}
       </ul>
     </div>
